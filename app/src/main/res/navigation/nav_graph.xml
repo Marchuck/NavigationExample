@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/landingFragment">
+
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="pl.marchuck.navigationexample.landing.LandingFragment"
+        android:label="landing_fragment"
+        tools:layout="@layout/landing_fragment">
+        <action
+            android:id="@+id/action_landingFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="pl.marchuck.navigationexample.items.ItemsFragment"
+        android:label="items_fragment"
+        tools:layout="@layout/items_fragment">
+
+        <argument
+            android:name="itemsCount"
+            android:defaultValue="5"
+            app:type="integer" />
+
+        <argument
+            android:name="bgColor"
+            android:defaultValue="65536"
+            app:type="integer" />
+
+        <argument
+            android:name="customSerializable"
+            android:defaultValue="null"
+            app:type="string" />
+
+        <action
+            android:id="@+id/action_itemsFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_itemsFragment_to_removeItemFragment"
+            app:destination="@id/removeItemFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="pl.marchuck.navigationexample.itemDetail.ItemDetailFragment"
+        android:label="item_detail_fragment"
+        tools:layout="@layout/item_detail_fragment" />
+    <fragment
+        android:id="@+id/removeItemFragment"
+        android:name="pl.marchuck.navigationexample.removeItem.RemoveItemFragment"
+        android:label="remove_item_fragment"
+        tools:layout="@layout/remove_item_fragment" />
+</navigation>
