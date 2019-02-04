@@ -1,6 +1,6 @@
 package pl.marchuck.navigationexample.landing
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 class LandingViewModel : ViewModel() {
     // TODO: Implement the ViewModel

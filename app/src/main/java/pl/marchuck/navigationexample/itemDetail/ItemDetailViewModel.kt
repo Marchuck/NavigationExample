@@ -1,6 +1,6 @@
 package pl.marchuck.navigationexample.itemDetail
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 class ItemDetailViewModel : ViewModel() {
     // TODO: Implement the ViewModel

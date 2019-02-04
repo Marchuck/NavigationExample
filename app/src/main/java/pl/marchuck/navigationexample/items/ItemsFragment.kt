@@ -1,8 +1,8 @@
 package pl.marchuck.navigationexample.items
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,7 +26,7 @@ class ItemsFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val vju = inflater.inflate(R.layout.items_fragment, container, false)
 
-        val args = ItemsFragmentArgs.fromBundle(arguments)
+        val args = ItemsFragmentArgs.fromBundle(arguments?:Bundle())
         val a: Int = args.itemsCount
         val b: Int = args.bgColor
         val c: CustomPojo? = args.customSerializable.fromJson(CustomPojo::class.java)
